@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" minWidth="1280.0" prefHeight="25.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.sdbm_02.MenuBarController"
+           >
+    <children>
+        <MenuBar fx:id="myMenubar" prefHeight="25.0" prefWidth="1280.0" stylesheets="@sdbmStyle.css">
+            <menus>
+                <Menu mnemonicParsing="false" text="Fichier">
+                    <items>
+                        <Menu fx:id="FileData" mnemonicParsing="false" text="File Database">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="FILE"/>
+                            </graphic>
+                            <items>
+                                <CheckMenuItem fx:id="openArticle" mnemonicParsing="false" onAction="#openArticleScene"
+                                               text="Article"/>
+                                <CheckMenuItem fx:id="openVendre" mnemonicParsing="false" onAction="#openVendreScene"
+                                               text="Vendre"/>
+                            </items>
+                        </Menu>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem mnemonicParsing="false" text="Sauvegarder">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="SAVE"/>
+                            </graphic>
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Enregistrer sous"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem fx:id="ReturnMain" mnemonicParsing="false" onAction="#exitApplication" text="Quitter">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="CLOSE"/>
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Aide">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+    <styleClass>
+        <String fx:value="root"/>
+        <String fx:value="menu-bar"/>
+    </styleClass>
+</AnchorPane>

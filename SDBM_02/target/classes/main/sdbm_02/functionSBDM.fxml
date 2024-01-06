@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="500.0" styleClass="root" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.EditController">
+     <children> <Label alignment="CENTER" layoutX="129.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="242.0" styleClass="label_head" text="Modifier/Ajouter">
+         <font>
+            <Font name="Arial Narrow Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTextField" alignment="CENTER" layoutX="197.0" layoutY="120.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="nomTextField" alignment="CENTER" layoutX="197.0" layoutY="155.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="prixTextField" alignment="CENTER" layoutX="197.0" layoutY="189.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="volumnTextField" alignment="CENTER" layoutX="197.0" layoutY="225.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="titrageTextField" alignment="CENTER" layoutX="197.0" layoutY="260.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="stockTextField" alignment="CENTER" layoutX="197.0" layoutY="294.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="typeTextField" alignment="CENTER" layoutX="197.0" layoutY="329.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="couleurTextField" alignment="CENTER" layoutX="197.0" layoutY="364.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="marqueTextField" alignment="CENTER" layoutX="197.0" layoutY="399.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="fabricantTextField" alignment="CENTER" layoutX="197.0" layoutY="434.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="paysTextField" alignment="CENTER" layoutX="197.0" layoutY="469.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <TextField fx:id="continentTextField" alignment="CENTER" layoutX="197.0" layoutY="504.0" prefHeight="25.0" prefWidth="218.0" styleClass="text-field" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="ID:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="Nom d'article:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="Prix d'achat:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="230.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="Volume:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="39.0" layoutY="265.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="123.0" styleClass="label_nom" text="Titrage:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="Stock:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="335.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="Type:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="Couleur:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="405.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="Marque:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="440.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="Fabricant:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="475.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="Pays:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="508.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" styleClass="label_nom" text="Continent:" textAlignment="RIGHT" />
+      <Button layoutX="185.0" layoutY="570.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#saveChange" prefHeight="28.0" prefWidth="112.0" text="Sauvegarder" />
+     </children>
+      <stylesheets>
+
+      <URL value="@sdbmStyle.css" />
+   </stylesheets>
+
+</AnchorPane>
