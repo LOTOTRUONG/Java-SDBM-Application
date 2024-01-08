@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class TypeDAO extends DAO<Type, Type, Integer> {
     @Override
     public Type getByID(Integer id) {
-        String sqlRequest = "Select id_type, nom_type from TYPEBIERE where id_type = " + id;
+        String sqlRequest = "Select id_type, nom_type from TYPE where id_type = " + id;
         Type type;
         try(Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(sqlRequest);
@@ -24,7 +24,7 @@ public class TypeDAO extends DAO<Type, Type, Integer> {
     }
     public ArrayList<Type> getAll(){
         ArrayList<Type> listType = new ArrayList<>();
-        String sqlRequest = "SELECT id_type, nom_type FROM TYPEBIERE";
+        String sqlRequest = "SELECT id_type, nom_type FROM TYPE";
         try(Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(sqlRequest);
             while (resultSet.next()) {
@@ -38,7 +38,7 @@ public class TypeDAO extends DAO<Type, Type, Integer> {
 
     @Override
     public ArrayList<Type> getLike(Type object) {
-        String sqlCommand = "SELECT id_type, nom_type FROM TYPEBIERE WHERE id_type LIKE '%" + object.getLibelle()+"%'";
+        String sqlCommand = "SELECT id_type, nom_type FROM TYPE WHERE id_type LIKE '%" + object.getLibelle()+"%'";
         ArrayList<Type> listType = new ArrayList<>();
         try(Statement statement = connection.createStatement()){
             ResultSet resultSet = statement.executeQuery(sqlCommand);
@@ -50,7 +50,7 @@ public class TypeDAO extends DAO<Type, Type, Integer> {
     }
     @Override
     public boolean update(Type type) {
-        String sqlRequest = "update TYPEBIERE set nom_type = ? WHERE id_type = ?";
+        String sqlRequest = "update TYPE set nom_type = ? WHERE id_type = ?";
         try(PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest,Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setString(1,type.getLibelle());
             preparedStatement.setInt(2, type.getId());
@@ -63,7 +63,7 @@ public class TypeDAO extends DAO<Type, Type, Integer> {
     }
     @Override
     public boolean insert(Type type) {
-        String sqlRequest = "insert into TYPEBIERE values " + type.getLibelle();
+        String sqlRequest = "insert into TYPE values " + type.getLibelle();
         try(Statement statement = connection.createStatement()) {
             statement.execute(sqlRequest);
             return true;
@@ -74,7 +74,7 @@ public class TypeDAO extends DAO<Type, Type, Integer> {
     }
     @Override
     public boolean delete(Type object) {
-        String sqlRequest = "Delete from TYPEBIERE WHERE ID_Type = ?";
+        String sqlRequest = "Delete from TYPE WHERE ID_Type = ?";
         try(PreparedStatement preparedStatement = connection.prepareStatement(sqlRequest)) {
             preparedStatement.setInt(1, object.getId());
             preparedStatement.executeUpdate();

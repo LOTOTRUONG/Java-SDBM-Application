@@ -13,8 +13,8 @@ public class SDBMConnection {
 
             try {
                 String dbURL = "jdbc:sqlserver://localhost:1433; database = SDBM";
-                String user = "dev";
-                String password = "loan@123456";
+                String user = "sa";
+                String password = "azerty@123456";
                 connection = DriverManager.getConnection(dbURL, user, password);
                // if (connection != null) {
                 //    DatabaseMetaData databaseMetaData = (DatabaseMetaData) connection.getMetaData();

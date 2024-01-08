@@ -36,9 +36,9 @@ public class ArticleDAO extends DAO<Article, Article, Integer> {
             ResultSet resultSet = callableStatement.executeQuery();
 
             while (resultSet.next()) {
-                int id = resultSet.getInt("ID_biere");
-                String nomBiere = resultSet.getString("Nom_biere");
-                float prixachat = resultSet.getFloat("prix_d_achat");
+                int id = resultSet.getInt("ID_Article");
+                String nomBiere = resultSet.getString("Nom_Article");
+                float prixachat = resultSet.getFloat("prix_achat");
                 int volumn = resultSet.getInt("volume");
                 float titrage = resultSet.getFloat("titrage");
                 int stock = resultSet.getInt("stock");

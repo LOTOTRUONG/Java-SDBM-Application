@@ -17,7 +17,7 @@ public class VendreDAO {
     public List<Vendre> getAllVendre() {
 
         String sqlRequest = "Select * from VENDRE " +
-                "JOIN ARTICLE on ARTICLE.ID_BIERE = VENDRE.ID_BIERE ";
+                "JOIN ARTICLE on ARTICLE.ID_ARTICLE = VENDRE.ID_ARTICLE ";
         List<Vendre> vendreList = new ArrayList<>();
         try (Connection sdbmConnection = SDBMConnection.getInstance();
              CallableStatement callableStatement = sdbmConnection.prepareCall(sqlRequest)) {
@@ -25,9 +25,9 @@ public class VendreDAO {
             while (resultSet.next()) {
                 int annee = resultSet.getInt("annee");
                 int numeroTicket = resultSet.getInt("numero_ticket");
-                int id_article = resultSet.getInt("id_biere");
+                int id_article = resultSet.getInt("ID_article");
                 int quantite = resultSet.getInt("quantite_de_vente");
-                double prix_vendre = resultSet.getDouble("prix_de_vendre");
+                double prix_vendre = resultSet.getDouble("prix_de_vente");
 
                 idTicket idTicket = new idTicket(annee, numeroTicket);
                 Vendre vendre = new Vendre(idTicket, id_article, quantite,prix_vendre);
