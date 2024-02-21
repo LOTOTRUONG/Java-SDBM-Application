@@ -14,7 +14,7 @@ Please check the database before using the application:
 #### Pull the Docker Image
 
 ```bash
-docker pull loantruong181/sdbm_sql:v2
+docker pull loantruong181/sdbm_sql:v4
 ```
 ### Interface of application
 
